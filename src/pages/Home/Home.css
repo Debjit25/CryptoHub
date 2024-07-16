@@ -1,0 +1,199 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    gap: 20px; /* Space between sections */
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    padding: 0px 10px;
+    padding-bottom: 100px;
+}
+
+.hero {
+    grid-column: 1 / span 2; /* Span across columns 1 and 2 */
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    max-width: 600px;
+    justify-self: center; /* Center the hero section within its grid cell */
+}
+
+.hero h1 {
+    font-size: max(4vw, 36px);
+}
+
+.hero p {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+}
+
+.hero form {
+    padding: 8px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero input {
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.hero button {
+    border: none;
+    background: #2b4162;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.animation-container {
+    grid-column: 3 / span 1; /* Span across column 3 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center; /* Center the animation within its grid cell */
+    width: 100%; /* Ensure it takes full width of its grid cell */
+    max-width: 600px;
+    margin-right: 60px; /* Set a maximum width for the animation */
+}
+
+.animation-container img {
+    width: 100%; /* Ensure the animation image scales to fill its container */
+}
+
+.crypto-table {
+    grid-column: 1 / span 3; /* Span across all three columns */
+    margin-top: 40px; /* Adjust top margin for spacing */
+    max-width: 1200px; /* Increase maximum width for a wider crypto table */
+    width: 100%; /* Ensure it takes full width of its grid cell */
+    /* background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15)); */
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+    justify-self: center; /* Center the crypto table within its grid cell */
+}
+
+.table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr; /* Adjust column widths as needed */
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    padding: 10px 0;
+}
+
+.table-layout p {
+    color: white; /* Adjust text color */
+    font-size: 1.1rem; /* Adjust font size */
+    text-align: center;
+}
+
+.market-cap {
+    text-align: center;
+}
+
+.table-layout:last-child {
+    border: none;
+}
+
+.table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-layout div img {
+    width: 35px;
+}
+
+.table-layout .green {
+    color: #00D515;
+}
+
+.table-layout .red {
+    color: #ff4646;
+}
+
+@media (max-width: 768px) {
+    .table-layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+
+    .market-cap {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero button {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+
+    /* .animation-container {
+        display: none;
+    } */
+
+    .table-layout div img {
+        width: 25px;
+    }
+
+    .table-layout {
+        font-size: 13px;
+    }
+
+    .hero form input {
+        width: 100px;
+    }
+
+    .hero {
+        margin: 40px auto;
+        gap: 20px;
+    }
+
+    .crypto-table {
+        margin-top: 20px;
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 430px) and (min-height: 932px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hero {
+        grid-column: 1 / span 1;
+        margin: auto;
+        max-width: 100%;
+        padding-left: 30px;
+    }
+
+    .crypto-table {
+        grid-column: 1 / span 1;
+        margin: 20px 0;
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+}
